@@ -4,7 +4,7 @@ ruby "2.7.2"
 
 source "https://rubygems.org"
 
-gem "rack", "~> 2.1.0"
+gem "rack", "~> 2.2.3"
 
 # Serialize models for JSON APIs
 gem "active_model_serializers", "~> 0.10.0"
@@ -47,7 +47,7 @@ gem 'google-protobuf', "~> 3.12.0"
 gem "lograge", "~> 0.4"
 
 # Dependency for rails
-gem "nokogiri", "~> 1.10.9"
+gem "nokogiri", "~> 1.10.10"
 
 # Open Graph tag
 gem "meta-tags", "~> 2.13.0"
@@ -89,14 +89,14 @@ gem "premailer-rails", "~> 1.10.3", require: false
 gem 'public_suffix', '~> 4.0.3'
 
 # Puma as app server
-gem "puma", "~> 5.0.2"
+gem "puma", "~> 5.1.0"
 
 # Make cracking a little bit harder
 gem "rack-attack", "~> 5.0"
 
 gem 'railties', "~> 6.0.3.1"
 
-gem "rails", "~> 6.0.3"
+gem "rails", "~> 6.0.3.4"
 gem 'rails-i18n', '~> 6.0.0'
 
 # I love captchas
@@ -111,7 +111,7 @@ gem "render_async", '~> 2.1.8'
 gem "rqrcode", "~> 0.10"
 
 # SCSS for stylesheets
-gem "sass-rails", "~> 5.0"
+gem "sass-rails", "~> 6.0.0"
 
 # Sendgrid mail service
 gem "sendgrid-ruby", "~> 6.2.1"
@@ -149,7 +149,6 @@ gem "zendesk_api", "~> 1.26.0"
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'listen', '~> 3.2'
 
   gem 'bullet'
 
@@ -175,6 +174,7 @@ end
 group :development, :test do
   # Create a temporary table-backed ActiveRecord model
   gem 'temping'
+  gem 'listen'
   gem 'rubocop-airbnb'
 
   gem "pry"
