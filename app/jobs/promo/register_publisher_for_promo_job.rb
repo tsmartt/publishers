@@ -5,7 +5,7 @@ module Promo
     queue_as :default
 
     def perform(publisher:)
-      return unless publisher.promo_enabled_2018q1
+      return unless publisher.feature_flags[UserFeatureFlags::REFERRAL_ENABLED_OVERRIDE]
       Rails.logger.info("Registering publisher #{publisher.id} for promo async.")
 
       if Promo::PublisherChannelsRegistrar.new(publisher: publisher).perform
