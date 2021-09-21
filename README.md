@@ -426,6 +426,6 @@ docker attach 234f116cd942
 To connect with a bash shell on a running container use:
 
 ```sh
-docker exec -i -t 234f116cd942 /bin/bash
+docker exec -i -t 234f116cd942 /bin/bashhhhhhh
 root@234f116cd942:/var/www#
 ```
